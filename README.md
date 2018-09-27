@@ -2,9 +2,6 @@
 
 <p align="center">Easy-to-use yet very configurable app introduction slider/swiper</p>
 
-```sh
-npm i react-native-app-intro-slider --save
-```
 
 | | |
 |-|-|
@@ -143,6 +140,7 @@ export default class App extends React.Component {
         slides={slides}
         renderDoneButton={this._renderDoneButton}
         renderNextButton={this._renderNextButton}
+        
       />
     );
   }
@@ -279,6 +277,7 @@ onSlideChange    | `function` | `void`                    | Called when user goe
 onDone           | `function` | `void`                    | Called when user ends the introduction by pressing the done button
 onSkip           | `function` | `void`                    | Called when user presses the skip button
 
+
 #### slide object
 Each slide object should contain at least a unique `key`. If you use the default layouts your object should furthermore contain:
 
@@ -291,6 +290,7 @@ textStyle        | `Style`-prop        | Styling for the text (e.g color, fontSi
 image            | `Image`-source prop | Slide image
 imageStyle       | `Style`-prop        | Styling for the image (e.g. size)
 backgroundColor  | `string`            | Slide background color
+paginationContainerStyle | `Style`-prop | Styling for the pagination container 
 
 If you use a custom `renderItem`-method you can design your slide objects as you see fit.
 
@@ -300,7 +300,7 @@ You can run the example Expo-app by cloning the repo:
 
 
 ```sh
-git clone https://github.com/Jacse/react-native-app-intro-slider.git
+git clone https://github.com/kamalpandey/react-native-app-intro-slider.git
 cd react-native-app-intro-slider/Example
 yarn
 yarn start
